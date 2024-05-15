@@ -2,7 +2,7 @@
 
 ### Status
 
-Currently under review for publication in the Chrome Web Store.
+![status](https://via.placeholder.com/15/fecb00/000000?text=+) **Currently under review for publication in the Chrome Web Store.**
 
 ### Store Preview
 
