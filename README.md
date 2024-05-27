@@ -1,8 +1,8 @@
 # Easy Custom Autofill
 
 ### Status
+**[Published](https://chromewebstore.google.com/detail/easy-custom-autofill/ilhgjljloaeeiognllkcpcfhiegoacfm)** ✔️
 
-![status](https://via.placeholder.com/15/fecb00/000000?text=+) **Currently under review for publication in the Chrome Web Store.**
 
 ### Store Preview
 
