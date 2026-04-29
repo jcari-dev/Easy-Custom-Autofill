@@ -147,233 +147,216 @@
 
     <section>
       <p>
-        Easy Custom Autofill is designed for saving low-risk text snippets that
-        you type often, then filling them into text fields from the browser
-        right-click menu.
+        Easy Custom Autofill is a simple browser extension for saving text you
+        type often, then filling it from the right-click menu.
       </p>
       <p>
-        This extension is not intended for passwords, payment information,
-        medical information, private identifiers, recovery codes, banking
-        details, or other sensitive information.
+        It is meant for public, low-risk text like links, usernames, short
+        templates, notes, or other text snippets you already copy and paste.
+      </p>
+      <p>
+        It is not a password manager. Do not use it for passwords, payment
+        information, recovery codes, bank details, medical information, private
+        identifiers, or anything sensitive.
       </p>
     </section>
 
     <section>
-      <h2>Data Collection and Storage</h2>
-      <h3>Saved Autofill Entries</h3>
+      <h2>Where your saved text is stored</h2>
       <p>
-        When you create an autofill entry, the entry name and saved text are
-        stored locally in your browser using <code>chrome.storage.local</code>.
+        Your saved entries are stored locally in your browser using
+        <code>chrome.storage.local</code>.
       </p>
       <p>
-        Your saved autofill entries are not sent to me, to an analytics service,
-        or to an external server by this extension.
-      </p>
-
-      <h3>Local Extension Preferences</h3>
-      <p>
-        The extension may store small local preferences, such as whether you
-        have clicked the Privacy Policy link or dismissed a local notice. These
-        preferences stay in your browser and are not sent to an external server.
+        I cannot see what you save in the extension. Easy Custom Autofill does
+        not intentionally send your saved entries to me, to my own server, or to
+        my own tracking system.
       </p>
     </section>
 
     <section>
-      <h2>No Analytics or Tracking</h2>
+      <h2>No built-in tracking</h2>
       <p>
-        Easy Custom Autofill does not use analytics, advertising trackers,
-        tracking pixels, remote logging, or user behavior tracking.
+        Easy Custom Autofill does not include its own analytics, ads, tracking
+        pixels, remote logging, or user behavior tracking.
       </p>
     </section>
 
     <section>
-      <h2>How the Extension Uses Your Data</h2>
-      <p>The extension uses your saved entries only to provide its main feature:</p>
+      <h2>How the extension uses your saved text</h2>
+      <p>The extension uses your saved text only to:</p>
       <ul>
-        <li>displaying your saved entries in the popup</li>
-        <li>creating right-click menu items</li>
-        <li>copying a saved entry when you click Copy</li>
-        <li>inserting your selected saved text into a field when you choose it from the right-click menu</li>
-        <li>exporting and importing your saved list when you choose those options</li>
+        <li>show your saved entries in the popup</li>
+        <li>create right-click menu options</li>
+        <li>copy an entry when you click Copy</li>
+        <li>fill the selected text into a field when you choose it</li>
+        <li>export or import your saved list when you choose those options</li>
       </ul>
+    </section>
+
+    <section>
+      <h2>Important: websites can read what you put on them</h2>
       <p>
-        The extension does not sell, rent, share, transmit, or disclose your
-        saved entries to third parties.
+        Easy Custom Autofill does not send your saved text anywhere by itself.
+        But once you fill or paste text into a website, that website may be able
+        to read, save, process, submit, or share it just like anything you typed
+        manually.
+      </p>
+      <p>
+        If a website uses third-party scripts, those scripts may also be able to
+        interact with the page depending on how that website works.
+      </p>
+      <p>
+        Easy Custom Autofill cannot control what websites do with text after you
+        place it on their page.
       </p>
     </section>
 
     <section>
-      <h2>Important Website Notice</h2>
+      <h2>Other risks outside this extension</h2>
       <p>
-        When you insert saved text into a website field, that website may be
-        able to read, process, save, submit, or share that text just like
-        anything you manually type or paste into the website.
+        Local storage is useful, but it is not risk-free. Your saved text
+        or exported backups could still be exposed by things outside this
+        extension's control, such as:
+      </p>
+      <ul>
+        <li>someone with access to your device</li>
+        <li>malware</li>
+        <li>malicious browser extensions</li>
+        <li>browser or operating system vulnerabilities</li>
+        <li>websites where you paste or autofill text</li>
+        <li>unsafe backup storage</li>
+        <li>accidentally sharing exported files</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Google, Chrome, and the Chrome Web Store</h2>
+      <p>
+        Easy Custom Autofill runs in Chrome and is distributed through the
+        Chrome Web Store.
       </p>
       <p>
-        For example, if you autofill text into a form, chat box, search box,
-        login field, comment box, or other webpage input, the website and any
-        scripts running on that website may be able to access that field
-        depending on how the website works.
+        Google may collect Chrome or Chrome Web Store information such as
+        installs, uninstalls, crash reports, diagnostics, usage statistics, or
+        security-related information according to Google's own policies and your
+        Chrome settings.
       </p>
       <p>
-        Easy Custom Autofill does not control what websites do with text after
-        you place it on their page.
-      </p>
-      <p>
-        For this reason, this extension should only be used for public,
-        low-risk, non-sensitive text.
+        That is controlled by Google and Chrome, not by Easy Custom Autofill.
+        This extension does not intentionally send your saved entries to Google,
+        to me, or to my own server.
       </p>
     </section>
 
     <section>
       <h2>Permissions</h2>
+
       <h3>Storage</h3>
-      <p>Used to save your autofill entries locally in your browser.</p>
+      <p>Used to save your entries locally in your browser.</p>
 
       <h3>Context Menus</h3>
-      <p>Used to add Easy Custom Autofill options to the right-click menu on editable fields.</p>
+      <p>Used to add Easy Custom Autofill to the right-click menu.</p>
 
       <h3>Active Tab and Scripting</h3>
       <p>Used to insert your selected saved text into the field you are using.</p>
 
       <h3>Content Script Access</h3>
       <p>
-        The extension includes a content script so it can detect editable fields
-        and fill text on webpages. This is needed for the autofill feature to
-        work on normal inputs, textareas, search boxes, and editable text areas.
+        Used to detect editable fields and fill selected text on webpages. This
+        helps the extension work on normal inputs, textareas, search boxes, and
+        editable text areas.
       </p>
       <p>
-        This access is not used to collect browsing history, monitor your
-        activity, or send page content to an external server.
+        This is not used to collect browsing history, monitor your browsing, or
+        send page content to me.
       </p>
     </section>
 
     <section>
-      <h2>Export and Import</h2>
+      <h2>Export and import</h2>
+
       <h3>Export</h3>
       <p>
-        When you use Export List, the extension creates a JSON backup file
-        containing your saved entries.
+        Export List creates a JSON backup file containing your saved entries.
       </p>
       <p>
-        This exported file is plain text. Anyone with access to that file may be
-        able to read its contents.
+        That file is plain text. Anyone with access to it may be able to read
+        it, so keep it somewhere safe.
       </p>
-      <p>Keep exported backups somewhere safe and do not export sensitive information.</p>
 
       <h3>Import</h3>
       <p>
-        When you use Import List, the extension reads the selected JSON file
-        locally in your browser and imports valid entries.
+        Import List reads the selected JSON file locally in your browser and
+        imports valid entries.
       </p>
       <p>
-        Importing may replace your current saved list. You should export your
-        current list before importing another backup.
+        Importing may replace your current saved list. Export your current list
+        before importing another backup.
       </p>
     </section>
 
     <section>
-      <h2>Sensitive Data Warning</h2>
-      <p>Do not save sensitive information in Easy Custom Autofill.</p>
-      <p>Do not save:</p>
-      <ul>
-        <li>passwords</li>
-        <li>one-time codes</li>
-        <li>recovery phrases</li>
-        <li>payment card information</li>
-        <li>bank information</li>
-        <li>Social Security numbers or government ID numbers</li>
-        <li>medical information</li>
-        <li>private personal details</li>
-        <li>anything you would not want stored in a plain-text backup file</li>
-      </ul>
-      <p>Easy Custom Autofill is not a password manager and should not be used as one.</p>
-    </section>
-
-    <section>
-      <h2>Security Limitations</h2>
-      <p>
-        Easy Custom Autofill is built to keep your saved entries local, but
-        local storage does not mean risk-free.
-      </p>
-      <p>
-        Your saved entries or exported backups could potentially be accessed
-        because of things outside this extension's control, including:
-      </p>
-      <ul>
-        <li>physical access to your device</li>
-        <li>malware on your device</li>
-        <li>malicious browser extensions</li>
-        <li>browser or operating system vulnerabilities</li>
-        <li>compromised websites where you paste or autofill text</li>
-        <li>unsafe backup storage</li>
-        <li>accidental sharing of exported JSON files</li>
-      </ul>
-      <p>
-        You are responsible for keeping your device, browser, extensions, and
-        backup files secure.
-      </p>
-    </section>
-
-    <section>
-      <h2>Data Loss</h2>
+      <h2>Data loss</h2>
       <p>
         Saved entries may be lost if you uninstall the extension, clear browser
-        or extension data, reset your browser profile, switch devices without
-        importing a backup, or experience browser storage corruption.
-      </p>
-      <p>Regularly export your saved list if the entries are important to you.</p>
-    </section>
-
-    <section>
-      <h2>Third-Party Services</h2>
-      <p>
-        The extension itself does not use third-party analytics, advertising,
-        tracking services, remote fonts, remote CSS libraries, or CDNs.
+        or extension data, reset your browser profile, switch devices without a
+        backup, or experience browser storage problems.
       </p>
       <p>
-        The Privacy Policy and project page may contain links to external
-        websites, such as LinkedIn or online safety resources. If you click an
-        external link, that website's own privacy policy and data practices
-        apply.
+        Export your saved list regularly if the entries are important to you.
       </p>
     </section>
 
     <section>
-      <h2>Online Safety Resources</h2>
-      <p>For general online safety guidance, you may review resources such as:</p>
+      <h2>External links</h2>
+      <p>
+        This page and the FAQ may link to external websites, such as LinkedIn or
+        online safety resources. If you click an external link, that website's
+        own privacy practices apply.
+      </p>
+    </section>
+
+    <section>
+      <h2>Online safety</h2>
+      <p>
+        For general online safety guidance, you can review the FTC Identity
+        Theft and Online Security resources:
+      </p>
       <ul>
-        <li><a href="https://consumer.ftc.gov/identity-theft-and-online-security" target="_blank" rel="noopener noreferrer">FTC Identity Theft and Online Security</a></li>
+        <li>
+          <a href="https://consumer.ftc.gov/identity-theft-and-online-security" target="_blank" rel="noopener noreferrer">
+            FTC Identity Theft and Online Security
+          </a>
+        </li>
       </ul>
     </section>
 
     <section>
       <h2>Liability</h2>
       <p>
-        Easy Custom Autofill is provided as a helpful tool for convenience, but
-        it is provided without guarantees.
+        Easy Custom Autofill is provided as a convenience tool without
+        guarantees.
       </p>
       <p>
         I am not responsible for data loss, data exposure, misuse of the
         extension, user mistakes, browser issues, device compromise, malicious
         software, third-party websites, vulnerabilities, software bugs, exported
-        backup files, or any damages resulting from use of the extension.
+        backup files, or damages resulting from use of the extension.
       </p>
       <p>
-        You are responsible for deciding what information you save, where you
-        paste it, how you store backups, and how you protect your device and
-        browser.
+        You are responsible for deciding what you save, where you paste it, how
+        you store backups, and how you protect your device and browser.
       </p>
     </section>
 
     <section>
-      <h2>Changes to This Policy</h2>
+      <h2>Changes</h2>
       <p>
         I may update this Privacy Policy from time to time. Updates may be
-        posted on the extension's Privacy Policy page, included in extension
-        update notes, or shown through an in-extension notice.
+        posted on this page, included in extension update notes, or shown inside
+        the extension.
       </p>
-      <p>You are encouraged to review this policy periodically.</p>
     </section>
 
     <section>
