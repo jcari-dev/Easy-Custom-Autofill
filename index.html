@@ -1,139 +1,84 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="icon.png" type="image/png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Easy Custom Autofill</title>
+  <meta name="description" content="Save text you type often, then fill it into any text box with a right-click or a few keys. Everything stays in your browser." />
+  <link rel="icon" href="assets/icon128.png" type="image/png" />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #151f2a;
+      --card: #1b2734;
+      --text: #f6f8fb;
+      --soft: #d8e0e9;
+      --muted: #9aa7b6;
+      --line: #344456;
+      --accent: #4ea8ff;
+      --accent-text: #08131f;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    main { max-width: 960px; margin: 0 auto; padding: 48px 20px 64px; }
+    header { display: grid; gap: 18px; justify-items: start; margin-bottom: 48px; }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .brand img { width: 56px; height: 56px; }
+    h1 { margin: 0; font-size: clamp(32px, 6vw, 48px); line-height: 1.1; letter-spacing: -.01em; }
+    .lead { margin: 0; max-width: 620px; color: var(--soft); font-size: 19px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .button { display: inline-block; padding: 11px 18px; border-radius: 8px; border: 1px solid var(--line); color: var(--text); font-weight: 700; text-decoration: none; }
+    .button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+    .button:hover { border-color: var(--accent); }
+    .button:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+    .points { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 0 0 48px; padding: 0; list-style: none; }
+    .points li { padding: 16px; background: var(--card); border: 1px solid var(--line); border-radius: 8px; color: var(--soft); font-size: 15px; }
+    .points strong { display: block; margin-bottom: 4px; color: var(--text); font-size: 16px; }
+    h2 { margin: 0 0 16px; font-size: 24px; }
+    .shots { display: grid; gap: 28px; margin: 0 0 48px; }
+    figure { margin: 0; }
+    figure img { display: block; width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--line); }
+    figcaption { margin-top: 8px; color: var(--muted); font-size: 15px; }
+    footer { padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; display: flex; flex-wrap: wrap; gap: 18px; }
+    footer a { color: var(--accent); font-weight: 700; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand">
+        <img src="assets/icon128.png" alt="" />
+        <h1>Easy Custom Autofill</h1>
+      </div>
+      <p class="lead">Save text you type often, then fill it into any text box with a right-click or a few keys. Everything stays in your browser.</p>
+      <div class="actions">
+        <a class="button primary" href="https://chromewebstore.google.com/detail/easy-custom-autofill/ilhgjljloaeeiognllkcpcfhiegoacfm">Add to Chrome</a>
+        <a class="button" href="updated/">Privacy policy</a>
+      </div>
+    </header>
 
-    <title>Privacy Policy</title>
-    <style>
-      body {
-        font-family: "Nunito", sans-serif;
-        margin: 0;
-        padding: 20px;
-        line-height: 1.6;
-      }
-      h1,
-      h2 {
-        color: #333;
-      }
-      p {
-        margin: 10px 0;
-      }
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
-    />
-  </head>
-  <body>
-    <h1>Privacy Policy</h1>
-    <h2>Data Collection and Storage</h2>
-    <p>
-        <strong>Local Storage:</strong> All data you save using this extension is stored locally on your device using <code>chrome.storage.local</code> (for Chrome) or <code>browser.storage.local</code> (for Firefox, when available). This includes any custom autofill entries you create.
-      </p>
-      
-    <p>
-      <strong>No Data Transmission:</strong> The extension does not send any
-      data to external servers. All operations are performed locally within your
-      browser.
-    </p>
-
-    <h2>Third-Party Services</h2>
-    <p>
-      <strong>Water.css, Google Fonts, and jsDelivr:</strong> The extension uses
-      Water.css, Google Fonts, and jsDelivr for styling purposes. While I do not
-      collect any personal data, these third-party services may collect
-      information such as IP addresses, browser type, operating system, and user
-      interactions.
-    </p>
-    <ul>
-      <li>
-        <strong>Google Fonts:</strong> The Google Fonts API logs the details of
-        the HTTP requests, including the requested URL, IP address, and
-        user-agent, to serve the appropriate fonts. This data is used for
-        aggregated analysis of font usage. No cookies are set or logged by
-        Google Fonts. More details can be found in the
-        <a
-          href="https://developers.google.com/fonts/faq/privacy"
-          target="_blank"
-          >Google Fonts Privacy Policy</a
-        >.
-      </li>
-      <li>
-        <strong>jsDelivr:</strong> jsDelivr logs visitor IP addresses, user
-        agent, and referring URLs for performance monitoring, security, and
-        aggregated analytics. This information helps improve the service and
-        ensure its reliability. More details can be found in the
-        <a
-          href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net?tid=311291297"
-          target="_blank"
-          >jsDelivr Privacy Policy</a
-        >.
-      </li>
+    <ul class="points">
+      <li><strong>Right-click to fill</strong>Pick an entry from the menu. The ones you used last are at the top.</li>
+      <li><strong>Type to fill</strong>Type <code>,,</code> and a short name, and your saved text appears. Optional.</li>
+      <li><strong>Highlight to save</strong>Select text on any page, right-click, and choose Save.</li>
+      <li><strong>Stays on your device</strong>No account, no tracking, nothing sent anywhere. Back up anytime.</li>
     </ul>
 
-    <h2>Data Security</h2>
-    <p>
-      <strong>Local Data:</strong> Your data remains on your device and is not
-      shared with anyone outside of this extension. However, be aware that
-      malicious extensions, browser exploits, or physical access to your device
-      could potentially compromise this data. Always ensure your browser and
-      extensions are from trusted sources and keep your device secure.
-    </p>
-    <p>
-      <strong>Export/Import:</strong> You can export your data for backup
-      purposes and import it back when needed. Ensure you store these backups
-      securely as they contain your saved data in plain text.
-    </p>
+    <h2>See it in action</h2>
+    <div class="shots">
+      <figure><img src="assets/screenshot-1-ways-to-fill.png" alt="Right-click a text box and pick an entry, or type ,,avail and the saved reply appears" width="1280" height="800" /><figcaption>Two quick ways to fill anything.</figcaption></figure>
+      <figure><img src="assets/screenshot-2-save-from-any-page.png" alt="Highlighted text with the right-click option to save it" width="1280" height="800" loading="lazy" /><figcaption>Save text from any page.</figcaption></figure>
+      <figure><img src="assets/screenshot-3-saved-in-your-browser.png" alt="The extension window next to a downloaded backup file" width="1280" height="800" loading="lazy" /><figcaption>Saved in your browser. Nowhere else.</figcaption></figure>
+      <figure><img src="assets/screenshot-4-easy-to-use.png" alt="Settings for theme, larger text and stronger contrast" width="1280" height="800" loading="lazy" /><figcaption>Easy to see. Easy to use.</figcaption></figure>
+      <figure><img src="assets/screenshot-5-shortcuts.png" alt="Keyboard shortcuts to search your entries or fill the most recent one" width="1280" height="800" loading="lazy" /><figcaption>Your keys. Your shortcuts.</figcaption></figure>
+    </div>
 
-    <h2>User Responsibilities</h2>
-    <p>
-      <strong>Sensitive Data:</strong> Avoid saving sensitive information in the
-      extension. Although your data is stored locally, exported files can be
-      accessed by anyone with access to them.
-    </p>
-    <p>
-      <strong>Regular Backups:</strong> Regularly export your data to prevent
-      loss in case of browser data corruption or accidental deletion.
-    </p>
-    <p>
-      <strong>Liability:</strong> I am not liable for any data loss or
-      compromise resulting from user actions, browser vulnerabilities, software
-      bugs, or other factors beyond my control. While every effort is made to
-      ensure the extension functions correctly, bugs may occur. Users should
-      regularly export their data to prevent potential loss. It is your
-      responsibility to use the extension securely and keep your data and
-      devices protected.
-    </p>
-
-    <h2>Changes to This Policy</h2>
-    <p>
-      I may update this privacy policy from time to time. Any changes will be
-      communicated through the extension update notes or via a notification
-      within the extension itself. Users are encouraged to periodically review
-      this privacy policy for the latest information.
-    </p>
-
-    <h2>Contact</h2>
-    <p>
-      For any questions or concerns regarding this privacy policy, please
-      contact me on
-      <a
-        href="https://www.linkedin.com/in/jorge-caridad/"
-        target="_blank"
-        rel="noopener noreferrer"
-        >LinkedIn</a
-      >.
-    </p>
-
-    <h2>User Consent</h2>
-    <p>
-      By using this extension, you consent to the terms outlined in this privacy
-      policy.
-    </p>
-    <br>
-    <p><em>Last updated: May 15, 2024</em></p>
-
-  </body>
+    <footer>
+      <a href="updated/">Privacy policy</a>
+      <a href="https://github.com/jcari-dev/Easy-Custom-Autofill/issues">Report a problem</a>
+      <a href="https://github.com/jcari-dev/Easy-Custom-Autofill">GitHub</a>
+    </footer>
+  </main>
+</body>
 </html>
